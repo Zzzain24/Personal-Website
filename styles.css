@@ -130,17 +130,16 @@ body {
     margin-left: 900px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 30px rgb(0, 0, 0); /* Add a shadow */
+    box-shadow: 0 5px 30px rgb(0, 0, 0);
     transition: transform 0.3s ease;
 }
 
 .zain:hover {
-    transform: translateY(-20px); /* Move up slightly on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0); /* Change shadow on hover */
+    transform: translateY(-20px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0); 
 }
 
 /* elements for screen sizes */
-
 @media (max-width: 1400px) {
     .home_btn {
         margin-right: 10px;
@@ -221,7 +220,7 @@ body * {
     animation: moveIn 1.5s ease-in-out;
 }
 
-/* remove the move into place animation on linkedin and github logos so it does not repeat*/
+/* remove the move into place animation on linkedin and github logos so it does not repeat */
 body .github,
 body .linkedin {
     animation: none;
@@ -266,8 +265,8 @@ body .linkedin {
     justify-content: space-between; 
     align-items: center;
     border-radius: 0px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8); /* White shadow */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8); 
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .about_page img:hover {
