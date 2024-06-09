@@ -36,7 +36,7 @@ body {
     margin-bottom: 80px;
     margin-top: 120px;
     margin-left: 80px;
-    position: relative; /* Make sure the pseudo-element is positioned relative to this */
+    position: relative;
     font-weight: normal;
 }
 
@@ -59,6 +59,7 @@ body {
     color: rgb(0, 60, 130);
 }
 
+/* typing animation for howdy world text */
 .typing-animation {
     margin-top: 130px;
     margin-bottom: 110px;
@@ -73,7 +74,7 @@ body {
     animation: typing 3s steps(14) infinite;
 }
 
-/* Keyframes for the typing animation */
+/* keyframes for the typing animation */
 @keyframes typing {
     from {
         width: 0;
@@ -94,7 +95,7 @@ body {
     max-width: 700px;
 }
 
-/* Keyframes for the shake animation */
+/* keyframes for the shake animation on linkedin and github logos */
 @keyframes shake {
     0% { transform: translate(0, 0); }
     10%, 90% { transform: translate(-2px, 0); }
@@ -109,13 +110,13 @@ body {
     margin-left: 80px;
     margin-right: 20px;
     width: 46px;
-    transition: transform 0.3s ease; /* Add a smooth transition */
+    transition: transform 0.3s ease;
 }
 
 .github {
     margin-left: 20px;
     width: 52px;
-    transition: transform 0.3s ease; /* Add a smooth transition */
+    transition: transform 0.3s ease;
 }
 
 .linkedin:hover,
@@ -130,7 +131,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 30px rgb(0, 0, 0); /* Add a shadow */
-    transition: transform 0.3s ease; /* Add a smooth transition */
+    transition: transform 0.3s ease;
 }
 
 .zain:hover {
@@ -138,7 +139,7 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0); /* Change shadow on hover */
 }
 
-
+/* elements for screen sizes */
 
 @media (max-width: 1400px) {
     .home_btn {
@@ -215,17 +216,18 @@ body {
     }
 }
 
-/* Apply the move into place animation to all elements */
+/* apply the move into place animation to all elements */
 body * {
     animation: moveIn 1.5s ease-in-out;
 }
 
+/* remove the move into place animation on linkedin and github logos so it does not repeat*/
 body .github,
 body .linkedin {
     animation: none;
 }
 
-/* about section*/
+/* about section */
 .about_page {
     background: rgb(80,0,0);
     background: radial-gradient(circle, rgba(80,0,0,1) 0%, rgba(43,41,42,1) 100%); 
@@ -257,23 +259,23 @@ body .linkedin {
 
 .about_page img {
     width: 300px;
-    height: auto; /* Maintain aspect ratio */
+    height: auto; 
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 125px;
-    justify-content: space-between; /* Adjusts the space between images */
-    align-items: center; /* Aligns the images vertically in the center */
+    justify-content: space-between; 
+    align-items: center;
     border-radius: 0px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8); /* White shadow */
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
 }
 
 .about_page img:hover {
-    transform: translateY(-20px); /* Move the image up */
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.8); /* Enhance the shadow on hover */
+    transform: translateY(-20px); 
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.8);
 }
 
-/* Apply the move into place animation to all elements */
+/* apply the move into place animation to all elements */
 .about_page * {
     animation: moveIn 1.5s ease-in-out;
 }
