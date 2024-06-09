@@ -25,7 +25,7 @@ body {
 }
 
 .home_btn {
-    margin-right: 817px;
+    margin-right: 785px;
     margin-left: 10px;
 }
 
@@ -279,6 +279,19 @@ body .linkedin {
     animation: moveIn 1.5s ease-in-out;
 }
 
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+.wave span {
+    display: inline-block;
+    animation: wave 1s infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
 
 
 
