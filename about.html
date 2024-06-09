@@ -33,23 +33,19 @@
         <h1 class="wave" id="typingHeader">About Me</h1>
     <script>
         function wrapCharsInSpan(element) {
-            const text = element.innerText;
-            element.innerHTML = "";
-            for (let i = 0; i < text.length; i++) {
-                const span = document.createElement('span');
+        const text = element.innerText;
+        element.innerHTML = "";
+        for (let i = 0; i < text.length; i++) {
+            const span = document.createElement('span');
+            if (text[i] === " ") {
+                span.innerHTML = "&nbsp;"; // Non-breaking space
+            } else {
                 span.innerText = text[i];
-                span.style.setProperty('--i', i);
-                element.appendChild(span);
-
-                // Add a space after 'About' if the next character is not a space
-                if (text.substring(i, i + 5) === 'About' && text[i + 5] !== ' ') {
-                    const spaceSpan = document.createElement('span');
-                    spaceSpan.innerText = ' ';
-                    spaceSpan.style.setProperty('--i', i + 5); // Position the space after 'About'
-                    element.appendChild(spaceSpan);
-                }
             }
+            span.style.setProperty('--i', i);
+            element.appendChild(span);
         }
+    }
         const header = document.getElementById('typingHeader');
         wrapCharsInSpan(header);
     </script>
