@@ -1,0 +1,270 @@
+/* home page */
+body{
+    background: rgb(80, 0, 0);
+    margin-top: 20px;
+    font-family: "Arial";
+}
+
+.nav_bar a {
+    background: rgb(80, 0, 0);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 20px;
+    font-weight: small;
+    font-size: 19px;
+}
+
+.nav_bar a:hover {
+    background: rgb(80, 0, 0);
+    color: rgba(255, 255, 255, 0.754);
+}
+
+.home_btn {
+    margin-right: 817px;
+    margin-left: 10px;
+}
+
+.welcome {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 80px;
+    margin-top: 120px;
+    margin-left: 80px;
+    position: relative; /* Make sure the pseudo-element is positioned relative to this */
+}
+
+.email {
+    margin-top: -70px;
+}
+
+.email a, .phone a{
+    color: white;
+}
+
+.phone {
+    margin-bottom: 0px;
+}
+
+.description span:hover {
+    color: rgb(0, 60, 130);
+}
+
+.typing-animation {
+    margin-top: 130px;
+    margin-bottom: 110px;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 80px;
+    font-size: 60px;
+    font-weight: bold;
+    border-right: 2px solid white;
+    max-width: 650px;
+    animation: typing 3s steps(14) infinite;
+}
+
+/* Keyframes for the typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 70%;
+    }
+}
+
+.description {
+    color: white;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: normal;
+    margin-top:-10px;
+    margin-left: 80px;
+    max-width: 700px;
+}
+
+/* Keyframes for the shake animation */
+@keyframes shake {
+    0% { transform: translate(0, 0); }
+    10%, 90% { transform: translate(-2px, 0); }
+    20%, 80% { transform: translate(2px, 0); }
+    30%, 50%, 70% { transform: translate(-2px, 0); }
+    40%, 60% { transform: translate(2px, 0); }
+    100% { transform: translate(0, 0); }
+}
+
+.linkedin {
+    margin-top: 120px;
+    margin-left: 80px;
+    margin-right: 20px;
+    width: 46px;
+    transition: transform 0.3s ease; /* Add a smooth transition */
+}
+
+.github {
+    margin-left: 20px;
+    width: 52px;
+    transition: transform 0.3s ease; /* Add a smooth transition */
+}
+
+.linkedin:hover,
+.github:hover {
+    animation: shake 1s;
+}
+
+.zain {
+    width: 300px;
+    margin-top: -250px;
+    margin-left: 900px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 30px rgb(0, 0, 0); /* Add a shadow */
+    transition: transform 0.3s ease; /* Add a smooth transition */
+}
+
+.zain:hover {
+    transform: translateY(-20px); /* Move up slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0); /* Change shadow on hover */
+}
+
+
+
+@media (max-width: 1400px) {
+    .home_btn {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .welcome {
+        font-size: 30px;
+        margin-bottom: 60px;
+        margin-top: 90px;
+        margin-left: 60px;
+    }
+
+    .description {
+        font-size: 12px;
+        margin-left: 60px;
+    }
+
+    .tamu {
+        width: 250px;
+        margin-left: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .welcome {
+        font-size: 20px;
+        margin-bottom: 40px;
+        margin-top: 60px;
+        margin-left: 40px;
+    }
+
+    .nav_bar a {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .home_btn {
+        margin: 0 5px;
+        padding: 3px 6px;
+        font-size: 12px;
+    }
+
+    .description {
+        font-size: 10px;
+        margin-left: 40px;
+    }
+
+    .linkedin,
+    .github {
+        margin-top: 30px;
+        margin-left: 10px;
+        width: 30px;
+    }
+
+    .tamu {
+        width: 150px;
+        margin-left: 60%;
+    }
+}
+
+@keyframes moveIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the move into place animation to all elements */
+body * {
+    animation: moveIn 1.5s ease-in-out;
+}
+
+
+/* about section*/
+.about_page {
+    background: rgb(25, 24, 24);
+    font-family: "Arial";
+    font-weight: normal;
+    color: white;
+}
+
+.about_page .nav_bar a{
+    background: rgb(25, 24, 24);
+}
+
+.about_page h1 {
+    margin-top: 70px;
+    font-size: 55px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.about_page h2 {
+    margin-left: 100px;
+    font-size: 25px;
+    margin-right: 200px;
+    line-height: 1.5;
+    font-weight: normal;
+}
+
+.about_page img {
+    width: 300px;
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 50px;
+    margin-left: 125px;
+    border-radius: 10px;
+    justify-content: space-between; /* Adjusts the space between images */
+    align-items: center; /* Aligns the images vertically in the center */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8); /* White shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.about_page img:hover {
+    transform: translateY(-20px); /* Move the image up */
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.8); /* Enhance the shadow on hover */
+}
+
+/* Apply the move into place animation to all elements */
+.about_page * {
+    animation: moveIn 1.5s ease-in-out;
+}
+
+
+
+
+
