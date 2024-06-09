@@ -1,0 +1,29 @@
+body {
+    background: rgb(80, 0, 0);
+    margin-top: 20px;
+    font-family: "Arial";
+}
+
+.nav_bar a {
+    background: rgb(80, 0, 0);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 20px;
+    font-weight: normal;
+    font-size: 19px;
+}
+
+.nav_bar a:hover {
+    background: rgb(80, 0, 0);
+    color: rgba(255, 255, 255, 0.754);
+}
+
+.home_btn {
+    margin-right: 785px;
+    margin-left: 10px;
+}

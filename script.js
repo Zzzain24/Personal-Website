@@ -20,3 +20,18 @@ function wrapCharsInSpan(element) {
 }
     const header = document.getElementById('typingHeader');
     wrapCharsInSpan(header);
+
+// scroll effect for experience section
+const experiences = document.querySelectorAll('.experience');
+function checkElementPosition() {
+    experiences.forEach((experience) => {
+        const rect = experience.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            experience.querySelector('.content').classList.add('visible');
+        } else {
+            experience.querySelector('.content').classList.remove('visible');
+        }
+    });
+}
+document.addEventListener('scroll', checkElementPosition);
+document.addEventListener('DOMContentLoaded', checkElementPosition);
