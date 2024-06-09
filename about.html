@@ -5,22 +5,64 @@
     <link rel="icon" type="image/png" href="bball.png">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans">
+    <style>
+        @keyframes wave {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .wave span {
+            display: inline-block;
+            animation: wave 1s infinite;
+            animation-delay: calc(0.1s * var(--i));
+        }
+    </style>
 </head>
-<body class = "about_page">
+<body class="about_page">
     <div class="nav_bar">
-        <a href="home.html" class = "home_btn">Home</a>
+        <a href="home.html" class="home_btn">Home</a>
         <a href="home.html">Resume</a>
         <a href="home.html">Projects</a>
         <a href="about.html">About</a>
         <a href="mailto:zainbharde@gmail.com">Contact</a>
     </div>
     <div> 
-        <h1>About Me</h1>
+        <h1 class="wave" id="typingHeader">About Me</h1>
+    <script>
+        function wrapCharsInSpan(element) {
+            const text = element.innerText;
+            element.innerHTML = "";
+            for (let i = 0; i < text.length; i++) {
+                const span = document.createElement('span');
+                span.innerText = text[i];
+                span.style.setProperty('--i', i);
+                element.appendChild(span);
+
+                // Add a space after 'About' if the next character is not a space
+                if (text.substring(i, i + 5) === 'About' && text[i + 5] !== ' ') {
+                    const spaceSpan = document.createElement('span');
+                    spaceSpan.innerText = ' ';
+                    spaceSpan.style.setProperty('--i', i + 5); // Position the space after 'About'
+                    element.appendChild(spaceSpan);
+                }
+            }
+        }
+        const header = document.getElementById('typingHeader');
+        wrapCharsInSpan(header);
+    </script>
         <h2> My name is Zain Bharde and I'm currently a Junior at Texas A&M University. I'm pursuing a
              B.S. in Data Engineering and a minor in Computer Science. I'm greatly interested in software development,
              machine learning, data engineering, AI, and cloud. Outside of school I enjoy playing
-             basketball, trying new resturants with friends, and traveling. My favorite team is the Los Angeles Lakers, 
-             and I hope to go to a home Lakers game one day!<h2>
+             basketball, trying new restaurants with friends, and traveling. My favorite team is the Los Angeles Lakers, 
+             and I hope to go to a home Lakers game one day!</h2>
+    </div>
+    <div>
+        <img src="food.png" alt="Image of sushi" class="food_img">   
+        <img src="london.png" alt="Image of Covent Garden in London" class="london_png">   
+        <img src="kobe.png" alt="Image of Kobe 8 Venice Beach" class="food_img">  
         <h2> 
             I have always been someone who is not afraid to try and learn new things as I have had an entrepreneurial 
             experience early on. I started my own sneaker reselling business in high school, and this side hustle 
@@ -28,11 +70,7 @@
             experience has taught me a lot about market analysis, problem solving, and risk management. I have 
             been able to transfer these skills to my academic and professional life. I am always looking for new
             opportunities to learn and grow, and I enjoy the pursuit of knowledge in the technology field!
-    </div>
-    <div>
-        <img src = "food.png" alt = "Image of sushi" class = "food_img">   
-        <img src = "london.png" alt = "Image of Covent Garden in London" class = "london_png">   
-        <img src = "kobe.png" alt = "Image of Kobe 8 Venice Beach" class = "food_img">   
+        </h2> 
     </div>
 </body>
 </html>

@@ -1,8 +1,9 @@
 /* home page */
-body{
+body {
     background: rgb(80, 0, 0);
     margin-top: 20px;
     font-family: "Arial";
+    font-weight: normal;
 }
 
 .nav_bar a {
@@ -15,7 +16,7 @@ body{
     text-decoration: none;
     font-size: 20px;
     border-radius: 20px;
-    font-weight: small;
+    font-weight: normal;
     font-size: 19px;
 }
 
@@ -37,18 +38,22 @@ body{
     margin-top: 120px;
     margin-left: 80px;
     position: relative; /* Make sure the pseudo-element is positioned relative to this */
+    font-weight: normal;
 }
 
 .email {
     margin-top: -70px;
+    font-weight: normal;
 }
 
 .email a, .phone a{
     color: white;
+    font-weight: normal;
 }
 
 .phone {
     margin-bottom: 0px;
+    font-weight: normal;
 }
 
 .description span:hover {
@@ -152,6 +157,7 @@ body{
     .description {
         font-size: 12px;
         margin-left: 60px;
+        font-weight: normal;
     }
 
     .tamu {
@@ -182,6 +188,7 @@ body{
     .description {
         font-size: 10px;
         margin-left: 40px;
+        font-weight: normal;
     }
 
     .linkedin,
@@ -216,40 +223,43 @@ body * {
 
 /* about section*/
 .about_page {
-    background: rgb(25, 24, 24);
+    background: rgb(80,0,0);
+    background: radial-gradient(circle, rgba(80,0,0,1) 0%, rgba(43,41,42,1) 100%); 
     font-family: "Arial";
     font-weight: normal;
     color: white;
 }
 
 .about_page .nav_bar a{
-    background: rgb(25, 24, 24);
+    background: none;
 }
 
 .about_page h1 {
     margin-top: 70px;
     font-size: 55px;
-    text-align: center;
+    margin-left: 100px;
     font-weight: bold;
 }
 
 .about_page h2 {
-    margin-left: 100px;
-    font-size: 25px;
+    margin-left: 90px;
+    font-size: 20px;
     margin-right: 200px;
     line-height: 1.5;
     font-weight: normal;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .about_page img {
     width: 300px;
     height: auto; /* Maintain aspect ratio */
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     margin-left: 125px;
-    border-radius: 10px;
     justify-content: space-between; /* Adjusts the space between images */
     align-items: center; /* Aligns the images vertically in the center */
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 0px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8); /* White shadow */
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
 }
