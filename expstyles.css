@@ -31,28 +31,69 @@ body {
 
 .scroll {
     color: white;
-    font-weight: normal;
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 60px;
-    font-size: 50px;
+    margin-top: 125px;
+    font-size: 60px;
 }
 
+/* move in animation for navbar and scroll text */ 
+@keyframes moveIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav_bar {
+    animation: moveIn 1s ease-out;
+}
+
+.scroll {
+    animation: moveIn 1s ease-out;
+}
+
+/* scroll wave animation */
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+.scroll span {
+    display: inline-block;
+    animation: wave 1s infinite;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+/* experience box sections */
 .experience {
-    width: 90%; /* Adjust width here */
-    height: 70vh; /* Adjust height here */
+    width: 85%;
+    height: 70vh; 
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 150px auto; /* Center the boxes and add vertical margin */
-    font-size: 2rem;
+    /* center the boxes and add vertical margin */
+    margin: 150px auto;
+    font-size: 35px;
     overflow: hidden;
     perspective: 1000px;
     background-color: black;
     opacity: 0;
     transform: scale(0.8);
     transition: opacity 1s ease-out, transform 1s ease-out;
+    /* border: 10px solid white; */
+    border: 10px solid rgb(20, 20, 20);
+    padding: 18px;
+    /* add shadow effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .experience.visible {
@@ -60,14 +101,125 @@ body {
     transform: scale(1);
 }
 
+/* text in the experience box */
 .content {
-    width: 500px;
+    width: 100%; /* Ensure the content spans the entire experience box */
     color: white;
+    padding: 20px; /* Add some padding for spacing */
     transform-origin: top;
     transform: rotateX(90deg);
     transition: transform 2s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+    margin-top: -100px;
+    margin-left: 20px;
+}
+
+.content h3 {
+    font-size: 20px;
+    margin-top: -20px;
+}
+
+.content p {
+    font-size: 20px;
+    margin-top: 50px;
+    margin-right: 450px;
 }
 
 .content.visible {
     transform: rotateX(0deg);
 }
+
+/* dematic text color change on hover */
+.content #dematic:hover {
+    color: rgb(231, 211, 32);
+}
+
+/* image in the experience box */
+.image {
+    width: 300px;
+    margin-left: 850px;
+    margin-top: -200px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8); /* Adjusted box-shadow color */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image:hover {
+    transform: translateY(-40px); 
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.8); /* Adjusted box-shadow color */
+}
+
+
+/* media query for smaller screen sizes */
+@media only screen and (max-width: 768px) {
+    .nav_bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav_bar a {
+        margin-bottom: 10px;
+    }
+
+    .home_btn {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .scroll {
+        margin-top: 50px;
+        font-size: 40px;
+    }
+
+    .experience {
+        margin: 50px auto;
+    }
+
+    .content p {
+        margin-right: 0;
+    }
+}
+
+/* media query for phones */
+@media only screen and (max-width: 480px) {
+    .nav_bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav_bar a {
+        margin-bottom: 10px;
+    }
+
+    .home_btn {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .scroll {
+        margin-top: 50px;
+        font-size: 40px;
+    }
+
+    .experience {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .content p {
+        margin-top: 20px;
+        margin-right: 0;
+    }
+
+    .image {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+

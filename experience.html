@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Experiences/Projects</title>
+<title>Experiences</title>
 <link rel="stylesheet" href="expstyles.css">
 </head>
 <body>
@@ -15,36 +15,46 @@
         <a href="mailto:zainbharde@gmail.com">Contact</a>
     </div>
     <div>
-        <h1 class = "scroll"> Scroll ⬇️</h1>
+        <h1 class = "scroll" id = "scroll_anim"> Scroll </h1>
     </div>
     <div class="experience" id="experience1">
         <div class="content">
-            <h2>Experience 1</h2>
+            <h2 id = "dematic"> <span >Dematic</span></h2>
+            <h3>Software Development Intern | May 2024 - Aug 2024</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+            <img src = "images/warehouse.png" alt = "Image of Dematic warehouse" class = "image">
         </div>
     </div>
     <div class="experience" id="experience2">
         <div class="content">
-            <h2>Experience 2</h2>
+            <h2 id = "tamu">Texas A&M Univserity</h2>
+            <h3>Undergraduate Research Assistant | Jan 2024 - May 2024</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+            <img src = "images/tamu.png" alt = "Image of Dematic warehouse" class = "image">
         </div>
     </div>
     <div class="experience" id="experience3">
         <div class="content">
-            <h2>Experience 3</h2>
+            <h2 id = "sufi">CloudSufi</h2>
+            <h3>Data Engineering Intern | Aug 2023 - Jan 2024</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+            <img src = "images/cloudsufi.jpeg" alt = "Image of Dematic warehouse" class = "image">
         </div>
     </div>
     <div class="experience" id="experience4">
         <div class="content">
-            <h2>Experience 4</h2>
+            <h2 id = "ai">AI4ALL</h2>
+            <h3>Discover AI Participant | Aug 2023 - Dec 2023</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+            <img src = "images/ai4all.jpeg" alt = "Image of Dematic warehouse" class = "image">
         </div>
     </div>
     <div class="experience" id="experience5">
         <div class="content">
-            <h2>Experience 5</h2>
+            <h2 id = "unlaced">Unlaced</h2>
+            <h3>Founder and Owner | Oct 2019 - Present</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+            <img src = "images/shoes.png" alt = "Image of Dematic warehouse" class = "image">
         </div>
     </div>
 <script>
@@ -63,11 +73,25 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-
     document.addEventListener('scroll', checkElementPosition);
     document.addEventListener('DOMContentLoaded', checkElementPosition);
 });
-
+function wrapCharsInSpan(element) {
+    const text = element.innerText;
+    element.innerHTML = "";
+    for (let i = 0; i < text.length; i++) {
+        const span = document.createElement('span');
+        if (text[i] === " ") {
+            span.innerHTML = "&nbsp;"; // Non-breaking space
+        } else {
+            span.innerText = text[i];
+        }
+        span.style.setProperty('--i', i);
+        element.appendChild(span);
+    }
+}
+    const header = document.getElementById('scroll_anim');
+    wrapCharsInSpan(header);
 </script>
 </body>
 </html>
