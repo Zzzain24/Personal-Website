@@ -14,6 +14,9 @@
         <a href="about.html">About</a>
         <a href="mailto:zainbharde@gmail.com">Contact</a>
     </div>
+    <div>
+        <h1 class = "scroll"> Scroll ⬇️</h1>
+    </div>
     <div class="experience" id="experience1">
         <div class="content">
             <h2>Experience 1</h2>
@@ -45,19 +48,26 @@
         </div>
     </div>
 <script>
+document.addEventListener("DOMContentLoaded", function() {
     const experiences = document.querySelectorAll('.experience');
+
     function checkElementPosition() {
-    experiences.forEach((experience) => {
-        const rect = experience.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
-            experience.querySelector('.content').classList.add('visible');
-        } else {
-            experience.querySelector('.content').classList.remove('visible');
+        experiences.forEach((experience) => {
+            const rect = experience.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                experience.classList.add('visible');
+                experience.querySelector('.content').classList.add('visible');
+            } else {
+                experience.classList.remove('visible');
+                experience.querySelector('.content').classList.remove('visible');
             }
         });
     }
+
     document.addEventListener('scroll', checkElementPosition);
     document.addEventListener('DOMContentLoaded', checkElementPosition);
+});
+
 </script>
 </body>
 </html>

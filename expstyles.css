@@ -29,20 +29,45 @@ body {
     margin-left: 10px;
 }
 
-.experience {
-    height: 100vh;
+.scroll {
+    color: white;
+    font-weight: normal;
     display: flex;
-    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    font-size: 50px;
+}
+
+.experience {
+    width: 90%; /* Adjust width here */
+    height: 70vh; /* Adjust height here */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 150px auto; /* Center the boxes and add vertical margin */
     font-size: 2rem;
     overflow: hidden;
     perspective: 1000px;
+    background-color: black;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
+
+.experience.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
 .content {
     width: 500px;
+    color: white;
     transform-origin: top;
     transform: rotateX(90deg);
     transition: transform 2s;
 }
-.visible {
+
+.content.visible {
     transform: rotateX(0deg);
 }
