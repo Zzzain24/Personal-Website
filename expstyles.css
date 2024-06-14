@@ -13,10 +13,9 @@ body {
     padding-right: 30px;
     color: white;
     text-decoration: none;
-    font-size: 20px;
     border-radius: 20px;
     font-weight: normal;
-    font-size: 19px;
+    font-size:19px;
 }
 
 .nav_bar a:hover {
@@ -82,7 +81,7 @@ body {
     align-items: center;
     /* center the boxes and add vertical margin */
     margin: 150px auto;
-    font-size: 35px;
+    font-size: 36px;
     overflow: hidden;
     perspective: 1000px;
     background-color: black;
@@ -112,17 +111,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Align items to the start (left) */
-    margin-top: -100px;
+    margin-top: -50px;
     margin-left: 20px;
 }
 
 .content h3 {
-    font-size: 20px;
+    font-size: 21px;
     margin-top: -20px;
 }
 
 .content p {
-    font-size: 20px;
+    font-size: 21px;
     margin-top: 50px;
     margin-right: 450px;
 }
@@ -131,8 +130,8 @@ body {
     transform: rotateX(0deg);
 }
 
-/* dematic text color change on hover */
-.content #dematic:hover {
+/* dematic text color */
+.content #dematic {
     color: rgb(231, 211, 32);
 }
 
@@ -140,14 +139,38 @@ body {
 .image {
     width: 300px;
     margin-left: 850px;
-    margin-top: -200px;
+    margin-top: -300px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8); /* Adjusted box-shadow color */
     transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.poster {
+    color: rgb(43, 95, 199);
 }
 
 .image:hover {
     transform: translateY(-40px); 
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.8); /* Adjusted box-shadow color */
+}
+
+/* tamu text color */
+.content #tamu {
+    color: rgb(80, 0, 0);
+}
+
+/* cloudsufi text color */
+.content #sufi {
+    color: rgb(255, 0, 0);
+}
+
+/* ai4all text color */
+.content #ai {
+    color: rgb(255, 145, 0);
+}
+
+/* unlaced text color */
+.content #unlaced {
+    color: rgb(15, 115, 172);
 }
 
 
