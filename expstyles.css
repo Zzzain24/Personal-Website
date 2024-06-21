@@ -1,6 +1,6 @@
 body {
     background: rgb(80, 0, 0);
-    margin-top: 20px;
+    margin-top: 2%;
     font-family: "Arial";
     overflow-x: hidden;
 }
@@ -13,9 +13,9 @@ body {
     padding-right: 30px;
     color: white;
     text-decoration: none;
-    border-radius: 20px;
+    border-radius: 2%;
     font-weight: normal;
-    font-size:19px;
+    font-size: 120%;
 }
 
 .nav_bar a:hover {
@@ -173,76 +173,4 @@ body {
     color: rgb(15, 115, 172);
 }
 
-
-/* media query for smaller screen sizes */
-@media only screen and (max-width: 768px) {
-    .nav_bar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav_bar a {
-        margin-bottom: 10px;
-    }
-
-    .home_btn {
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-
-    .scroll {
-        margin-top: 50px;
-        font-size: 40px;
-    }
-
-    .experience {
-        margin: 50px auto;
-    }
-
-    .content p {
-        margin-right: 0;
-    }
-}
-
-/* media query for phones */
-@media only screen and (max-width: 480px) {
-    .nav_bar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav_bar a {
-        margin-bottom: 10px;
-    }
-
-    .home_btn {
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-
-    .scroll {
-        margin-top: 50px;
-        font-size: 40px;
-    }
-
-    .experience {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .content {
-        margin-top: 0;
-        margin-left: 0;
-    }
-
-    .content p {
-        margin-top: 20px;
-        margin-right: 0;
-    }
-
-    .image {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
+/* media queries */
