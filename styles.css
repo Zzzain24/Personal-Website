@@ -293,6 +293,77 @@ body .linkedin {
     animation-delay: calc(0.1s * var(--i));
 }
 
+/* media queries for desktops and laptops */
+/* large desktops and laptops */
+@media (min-width: 1200px) {
+    .about_page h1 {
+        margin-top: 70px;
+        font-size: 55px;
+        margin-left: 100px;
+    }
+
+    .about_page h2 {
+        margin-left: 90px;
+        font-size: 20px;
+        margin-right: 200px;
+        padding: 10px;
+    }
+
+    .about_page img {
+        width: 300px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 125px;
+    }
+}
+
+/* medium desktops and laptops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .about_page h1 {
+        margin-top: 60px;
+        font-size: 50px;
+        margin-left: 80px;
+    }
+
+    .about_page h2 {
+        margin-left: 70px;
+        font-size: 18px;
+        margin-right: 150px;
+        padding: 10px;
+    }
+
+    .about_page img {
+        width: 250px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-left: 100px;
+    }
+}
+
+/* small desktops and laptops */
+@media (min-width: 768px) and (max-width: 991px) {
+    .about_page h1 {
+        margin-top: 50px;
+        font-size: 45px;
+        margin-left: 60px;
+    }
+
+    .about_page h2 {
+        margin-left: 50px;
+        font-size: 16px;
+        margin-right: 100px;
+        padding: 8px;
+    }
+
+    .about_page img {
+        width: 200px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 75px;
+    }
+}
+
+
 
 
 
