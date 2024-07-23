@@ -1,16 +1,9 @@
-/**
-* Template Name: Personal
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Updated: Mar 17 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
+/*
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: Arial;
   background-color: #040404;
   color: #fff;
   position: relative;
@@ -77,7 +70,7 @@ h6 {
   padding: 0;
   line-height: 1;
   font-weight: 700;
-  font-family: "Poppins", sans-serif;
+  font-family: Arial;
 }
 
 #header h1 a,
@@ -225,7 +218,7 @@ h6 {
   align-items: center;
   justify-content: space-between;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: Arial;
   font-size: 16px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
@@ -383,7 +376,7 @@ section .container {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #aaaaaa;
-  font-family: "Poppins", sans-serif;
+  font-family: Arial;
 }
 
 .section-title h2::after {
@@ -401,7 +394,7 @@ section .container {
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+  font-family: Arial;
   color: #fff;
 }
 
@@ -456,7 +449,7 @@ section .container {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: Arial;
   color: #fff;
 }
 
@@ -472,46 +465,17 @@ section .container {
 }
 
 /*--------------------------------------------------------------
-# Interests
+# Experience
 --------------------------------------------------------------*/
-.interests .icon-box {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.08);
-  transition: ease-in-out 0.3s;
-}
-
-.interests .icon-box i {
-  font-size: 32px;
-  padding-right: 10px;
-  line-height: 1;
-}
-
-.interests .icon-box h3 {
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-size: 16px;
-  color: #fff;
-}
-
-.interests .icon-box:hover {
-  background: rgba(255, 255, 255, 0.12);
-}
-
-/*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
-.services .icon-box {
+.experience .icon-box {
+  margin-top: 50px;
   text-align: center;
   background: rgba(204, 204, 204, 0.1);
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
 }
 
-.services .icon-box .icon {
+.experience .icon-box .icon {
   margin: 0 auto;
   width: 64px;
   height: 64px;
@@ -525,12 +489,12 @@ section .container {
   transform-style: preserve-3d;
 }
 
-.services .icon-box .icon i {
+.experience .icon-box .icon i {
   color: #fff;
   font-size: 28px;
 }
 
-.services .icon-box .icon::before {
+.experience .icon-box .icon::before {
   position: absolute;
   content: "";
   left: -8px;
@@ -543,42 +507,136 @@ section .container {
   transform: translateZ(-1px);
 }
 
-.services .icon-box h4 {
+.experience .icon-box h4 {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 24px;
 }
 
-.services .icon-box h4 a {
+.experience .role h4{
+  font-size: 18px;
+  color: rgb(111, 111, 111);
+}
+
+.experience .icon-box h4 a {
   color: #fff;
 }
 
-.services .icon-box p {
+.experience .icon-box p {
   line-height: 24px;
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 0;
 }
 
-.services .icon-box:hover {
+.experience .icon-box:hover {
   background: rgb(80,0,0);
   border-color: rgb(80,0,0);
 }
 
-.services .icon-box:hover .icon {
+.experience .icon-box:hover .icon {
   background: #fff;
 }
 
-.services .icon-box:hover .icon i {
+.experience .icon-box:hover .icon i {
   color: rgb(80,0,0);
 }
 
-.services .icon-box:hover .icon::before {
-  background: #35e888;
+.experience .icon-box:hover .icon::before {
+  background: rgba(0, 0, 0, 0.1);
 }
 
-.services .icon-box:hover h4 a,
-.services .icon-box:hover p {
+.experience .icon-box:hover h4 a,
+.experience .icon-box:hover p {
   color: #fff;
+}
+
+.experience .icon-box:hover h4 a { 
+  color: black; 
+}
+
+/*--------------------------------------------------------------
+# Projects
+--------------------------------------------------------------*/
+.projects .icon-box {
+  margin-top: 50px;
+  text-align: center;
+  background: rgba(204, 204, 204, 0.1);
+  padding: 80px 20px;
+  transition: all ease-in-out 0.3s;
+}
+
+.projects .icon-box .icon {
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  background: rgb(80,0,0);
+  border-radius: 5px;
+  transition: all 0.3s ease-out 0s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transform-style: preserve-3d;
+}
+
+.projects .icon-box .icon i {
+  color: #fff;
+  font-size: 28px;
+}
+
+.projects .icon-box .icon::before {
+  position: absolute;
+  content: "";
+  left: -8px;
+  top: -8px;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  transition: all 0.3s ease-out 0s;
+  transform: translateZ(-1px);
+}
+
+.projects .icon-box h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.projects .icon-box h4 a {
+  color: #fff;
+}
+
+.projects .icon-box p {
+  line-height: 24px;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.projects .icon-box:hover {
+  background: rgb(80,0,0);
+  border-color: rgb(80,0,0);
+}
+
+.projects .icon-box:hover .icon {
+  background: #fff;
+}
+
+.projects .icon-box:hover .icon i {
+  color: rgb(80,0,0);
+}
+
+.projects .icon-box:hover .icon::before {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.projects .icon-box:hover h4 a,
+.projects .icon-box:hover p {
+  color: #fff;
+}
+
+.projects .icon-box:hover h4 a { 
+  color: black; 
 }
 
 /*--------------------------------------------------------------
@@ -607,12 +665,12 @@ section .container {
   margin: 10px 0 8px 68px;
 }
 
-.contact .info-box p {
+.contact .info-box a {
   padding: 0;
   color: #fff;
   line-height: 24px;
   font-size: 14px;
-  margin: 0 0 0 68px;
+  margin: 0 0 0 16px;
 }
 
 .contact .info-box .social-links {
@@ -725,7 +783,7 @@ section .container {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #15bb62;
+  background: rgb(80,0,0);
 }
 
 @keyframes animate-loading {
